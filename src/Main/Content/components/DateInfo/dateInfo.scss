@@ -1,0 +1,92 @@
+.content-info-date {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.type-watch {
+  font-weight: 400;
+}
+
+.button-dropdown {
+  width: 160px;
+}
+
+.wrapper-button {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.hours-on-course {
+  display: flex;
+  width: 160px;
+  height: 30px;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.button-title {
+  width: 110px;
+  font-size: 12px;
+  color: grey;
+  padding-right: 30px;
+  border-right: 1px solid #e8e5e5;
+}
+
+.hours-on-course .ant-btn {
+  width: 29px;
+  height: 29px;
+  border-radius: 4px;
+}
+
+.total-hours {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #e8e5e5;
+  margin: 0;
+  padding-top: 3px;
+}
+
+.total-hours-title {
+  height: 100%;
+  font-size: 10px;
+  line-height: 10px;
+  margin: 0;
+  padding-top: 3px;
+  background: #e8e5e5;
+}
+
+.date-on-course {
+  width: 160px;
+  height: 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 12px;
+  align-items: center;
+  line-height: 25px;
+}
+
+.wrapper-date-on-course {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.wrapper-date-on-course span {
+  padding-top: 3px;
+  height: 100%;
+}
+
+.date-on-course-title {
+  color: #faf8f8;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #a4a2a2;
+}

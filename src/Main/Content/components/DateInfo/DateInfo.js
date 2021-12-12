@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './dateInfo.scss';
 import './index.css'
+import moment from 'moment'
 import {Button, Dropdown, Menu, Space} from "antd";
-import {DownOutlined} from "@ant-design/icons";
+import {DownOutlined, MinusOutlined, PlusOutlined} from "@ant-design/icons";
 
-export const DateInfo = () => {
+export const DateInfo = ({
+                             typeDate,
+                             setTypeDate
+                         }) => {
+    const [hourAll, setHourAll] = useState(0)
 
-    function handleMenuClick(e) {
-
+    const handleMenuClick = (e) => {
+        setTypeDate(typeDate === 'Академические' ? 'Астрономические' : "Академические")
     }
 
     const menu = (
@@ -25,24 +30,44 @@ export const DateInfo = () => {
         <div className='content-info-date'>
             <div className='type-watch'>
                 <Space wrap>
-                    <Dropdown overlay={menu}>
-                        <Button>
-                            Академические <DownOutlined/>
+                    <Dropdown overlay={menu} overlayClassName='dropdown'>
+                        <Button className='button-dropdown'>
+                            <span className='button-title'>
+                                 {typeDate}
+                            </span>
+                            <DownOutlined/>
                         </Button>
                     </Dropdown>
                 </Space>
             </div>
 
             <div className='hours-on-course'>
-                <button>-</button>
-                <p>3</p>
-                <p>Всего часов</p>
-                <button>+</button>
+                <Button type="primary"
+                        size='middle'
+                        className='button-icon'
+                        onClick={() => setHourAll(hourAll === 0 ? 0 : hourAll - 1)}
+                >
+                    <MinusOutlined/>
+                </Button>
+                <div className='wrapper-button'>
+                    <p className='total-hours'>{hourAll}</p>
+                    <p className='total-hours-title'>Всего часов</p>
+                </div>
+                <Button type="primary"
+                        size='middle'
+                        className='button-icon'
+                        onClick={() => setHourAll(hourAll + 1)}
+                >
+                    <PlusOutlined/>
+                </Button>
             </div>
-            <div>
-                <span>22.04.2021 до 22.04.2021</span>
+            <div className='date-on-course'>
+                <div className='wrapper-date-on-course'>
+                    <span>{moment().format("DD.MM.YYYY")}</span>
+                    <span className='date-on-course-title'>до</span>
+                    <span>{moment().add(`${hourAll}`, 'days').format("DD.MM.YYYY")}</span>
+                </div>
             </div>
-
         </div>
     );
 };

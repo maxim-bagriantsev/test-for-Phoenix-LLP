@@ -1,0 +1,25 @@
+.teacher-info {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.teacher-info-name {
+  width: 100%;
+  font-weight: 400;
+}
+
+.button-dropdown-teacher {
+  width: 340px;
+  text-align: start;
+}
+
+
+.button-dropdown-teacher .button-title {
+  width: 95%;
+}
+

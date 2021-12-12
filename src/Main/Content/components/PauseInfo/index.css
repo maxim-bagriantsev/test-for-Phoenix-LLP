@@ -1,0 +1,14 @@
+.type-pause .ant-space-item {
+    margin-left: 0px;
+}
+
+.hours-on-course .ant-btn {
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.type-pause .ant-space-item {
+    width: 160px;
+}
