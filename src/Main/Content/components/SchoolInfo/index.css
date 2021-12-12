@@ -1,0 +1,24 @@
+.ant-space-item {
+    margin-left: 50px;
+    padding-bottom: 0;
+}
+
+.button-color {
+    height: auto;
+    padding: 2px;
+}
+
+.button-color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-select-color {
+    margin: 0;
+    width: 20px;
+    height: 15px;
+    background-color: grey;
+    margin-right: 10px;
+}
